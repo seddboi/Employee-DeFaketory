@@ -1,5 +1,5 @@
 import React from "react";
-import SearchBar from "../SearchBar/searchbar";
+import Navigation from "../Navigation/navigation";
 
 function InsertHeader() {
     
@@ -9,6 +9,7 @@ function InsertHeader() {
             <hr/>
             <h3>Use the search bar to find an employee or click the titles to filter!</h3>
             <hr/>
+            <Navigation />
         </div>
     );
 }
