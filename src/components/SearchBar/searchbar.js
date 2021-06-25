@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import CreateContext from "../../utils/context";
 
-const searchBar = () => {
+const SearchBar = () => {
     let context = useContext(CreateContext);
 
     return (
@@ -15,4 +15,4 @@ const searchBar = () => {
     );
 }
 
-export default searchBar;
+export default SearchBar;
