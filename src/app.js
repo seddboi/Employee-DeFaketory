@@ -1,14 +1,17 @@
 import React from "react";
-import MainPage from "./components/MainPage/mainpage.js"
-import "./app.css";
+import PageHeader from "./components/PageHeader/pageheader";
+import Organize from "./components/Organize/organize";
+import Wrapper from "./components/DataWrapper/datawrapper";
 
 function buildDisplay() {
     return(
         <div className='App'>
-            <div>
-                <MainPage />
-            </div>
+            <Organize>
+                <PageHeader />
+                <Wrapper />
+            </Organize>
         </div>
 
     )
 }
+export default buildDisplay;
