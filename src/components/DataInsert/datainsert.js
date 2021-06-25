@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import setBody from "../components/DataBody/databody";
+import SetBody from "../components/DataBody/databody";
 import CreateContext from "../../utils/context";
 
 const groupData = () => {
@@ -16,7 +16,7 @@ const groupData = () => {
                     )
                 })}
 
-                <setBody />
+                <SetBody />
             </table>
         </div>
     );
