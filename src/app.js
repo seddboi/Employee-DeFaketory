@@ -11,7 +11,6 @@ function buildDisplay() {
                 <Wrapper />
             </Organize>
         </div>
-
-    )
+    );
 }
 export default buildDisplay;
