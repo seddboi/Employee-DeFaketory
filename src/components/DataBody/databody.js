@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import CreateContext from "../../utils/context";
 
-const setBody = () => {
+const SetBody = () => {
     let context = useContext(CreateContext);
 
     return (
@@ -10,7 +10,7 @@ const setBody = () => {
                 {
                     return (
                         <div data-th="image" className="align-middle">
-                            <img src={picture.medium} className='image-responsive'/>
+                            <img src={picture.medium} alt={`of ${name.first} ${name.last}`} className='image-responsive'/>
 
                             <h3 className='name-cell align-middle'>{name.last}, {name.first}</h3>
                             
@@ -26,4 +26,4 @@ const setBody = () => {
     );
 }
 
-export default setBody;
+export default SetBody;

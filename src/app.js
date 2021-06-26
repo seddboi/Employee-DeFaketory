@@ -3,7 +3,7 @@ import PageHeader from "./components/PageHeader/pageheader";
 import Organize from "./components/Organize/organize";
 import Wrapper from "./components/DataWrapper/datawrapper";
 
-function buildDisplay() {
+function BuildDisplay() {
     return(
         <div className='App'>
             <Organize>
@@ -13,4 +13,4 @@ function buildDisplay() {
         </div>
     );
 }
-export default buildDisplay;
+export default BuildDisplay;

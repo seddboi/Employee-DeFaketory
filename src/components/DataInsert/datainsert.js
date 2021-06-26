@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from "react";
-import SetBody from "../components/DataBody/databody";
+import React, {useContext} from "react";
+import SetBody from "../DataBody/databody";
 import CreateContext from "../../utils/context";
 
-const groupData = () => {
+const GroupData = () => {
     let context = useContext(CreateContext);
 
     return (
@@ -22,4 +22,4 @@ const groupData = () => {
     );
 }
 
-export default groupData;
+export default GroupData;

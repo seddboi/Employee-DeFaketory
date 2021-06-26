@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import DataInsert from "../DataInsert/datainsert";
 import Navigation from "../Navigation/navigation";
-import API from "../../utils/api";
+import API from "../../utils/api.js";
 import Context from "../../utils/context";
 
 const Wrapper = () => {
@@ -30,7 +30,7 @@ const Wrapper = () => {
     });
 
     const handleSort = () => {
-        if (developerState.order == 'descend') {
+        if (developerState.order === 'descend') {
             setDeveloperState({
                 order: 'ascend',
             })
@@ -65,10 +65,10 @@ const Wrapper = () => {
                 filteredUsers: results.data.results,
             });
         });
-    }, []);
+    });
 
     return (
-        <Context.Provider value={developerState, handleChange, handleSort}>
+        <Context.Provider value={{developerState, handleChange, handleSort}}>
             <Navigation />
             <div className='data-area'>
                 {developerState.filteredUsers.length}
