@@ -4,7 +4,7 @@ import Navigation from "../Navigation/navigation";
 import API from "../../utils/api.js";
 import Context from "../../utils/context";
 
-const Wrapper = () => {
+const Wrapper = ({children}) => {
     let [developerState, setDeveloperState] = useState({
         users:[],
         order: "ascend",
