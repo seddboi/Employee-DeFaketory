@@ -1,15 +1,15 @@
 import React from "react";
 import PageHeader from "./components/PageHeader/pageheader";
-import Organize from "./components/Organize/organize";
-import Wrapper from "./components/DataWrapper/datawrapper";
+import Wrapper from "./components/Wrapper/wrapper";
+import DataWrapper from "./components/DataWrapper/datawrapper";
 
 function BuildDisplay() {
     return(
         <div className='App'>
-            <Organize>
+            <Wrapper>
                 <PageHeader />
-                <Wrapper />
-            </Organize>
+                <DataWrapper />
+            </Wrapper>
         </div>
     );
 }

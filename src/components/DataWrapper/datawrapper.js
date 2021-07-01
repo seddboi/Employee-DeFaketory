@@ -4,7 +4,7 @@ import Navigation from "../Navigation/navigation";
 import API from "../../utils/api.js";
 import Context from "../../utils/context";
 
-const Wrapper = ({children}) => {
+const DataCollect = ({children}) => {
     let [developerState, setDeveloperState] = useState({
         users:[],
         order: "ascend",
@@ -48,7 +48,7 @@ const Wrapper = ({children}) => {
         const filteredList = developerState.users.filter( (item) => {
             let newValues = item.name.first.toLowerCase();
 
-            return newValues.indexOf(selectedValue.toLowerCase()) !== -1;
+            return newValues.indexOf(selectedValue.toLowerCase());
         });
 
         setDeveloperState({
@@ -65,19 +65,17 @@ const Wrapper = ({children}) => {
                 filteredUsers: results.data.results,
             });
         });
-    });
+    }, []);
 
     return (
         <Context.Provider value={{developerState, handleChange, handleSort}}>
             <Navigation />
-            <div className='data-area'>
-                {developerState.filteredUsers.length}
-
+            <div className='data-collect'>
                 <DataInsert />
             </div>
         </Context.Provider>
     );
 };
 
-export default Wrapper;
+export default DataCollect;
 
