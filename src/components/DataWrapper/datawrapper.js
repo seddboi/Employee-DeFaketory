@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from "react";
 import DataInsert from "../DataInsert/datainsert";
 import Navigation from "../Navigation/navigation";
-import API from "../../utils/api.js";
+// import API from "../../utils/api.js";
 import Context from "../../utils/context";
+import {getUsers} from "../../utils/api";
 
 const DataCollect = ({children}) => {
     let [developerState, setDeveloperState] = useState({
@@ -58,7 +59,7 @@ const DataCollect = ({children}) => {
     };
 
     useEffect( () => {
-        API.getUsers().then( (results) => {
+        getUsers().then( (results) => {
             setDeveloperState({
                 ...developerState,
                 users: results.data.results,
